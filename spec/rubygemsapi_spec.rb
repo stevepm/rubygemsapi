@@ -23,4 +23,12 @@ describe RubyGemsApi do
   it 'can return version downloads' do
     expect(faraday.version_downloads).to eq(1201239)
   end
+
+  it 'can return the urls' do
+    expect(faraday.urls).to eq({
+                                 :gem_uri=>"http://rubygems.org/gems/faraday-0.9.0.gem",
+                                 :homepage_uri=>"https://github.com/lostisland/faraday",
+                                 :project_uri=>"http://rubygems.org/gems/faraday"
+                               })
+  end
 end
