@@ -19,4 +19,8 @@ describe RubyGemsApi do
   it 'can return the current version' do
     expect(faraday.version).to eq("0.9.0")
   end
+
+  it 'can return version downloads' do
+    expect(faraday.version_downloads).to eq(1201239)
+  end
 end

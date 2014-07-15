@@ -27,4 +27,8 @@ module RubyGemsApi
   def version
     @body["version"]
   end
+
+  def version_downloads
+    @body["version_downloads"]
+  end
 end
