@@ -23,4 +23,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "jazz_hands"
+  spec.add_development_dependency "faraday"
 end
