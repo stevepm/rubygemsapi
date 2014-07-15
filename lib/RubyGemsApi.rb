@@ -1,5 +1,6 @@
 require "RubyGemsApi/version"
 require 'faraday'
+require 'json'
 
 module RubyGemsApi
   class << self
@@ -12,10 +13,14 @@ module RubyGemsApi
 
   def look_up(gem_name)
     @response = Faraday.get "https://rubygems.org/api/v1/gems/#{gem_name}.json"
-    @gem_name = gem_name
+    @body = JSON.parse(@response.body)
   end
 
   def status
     @response.status
+  end
+
+  def downloads
+    @body["downloads"]
   end
 end
