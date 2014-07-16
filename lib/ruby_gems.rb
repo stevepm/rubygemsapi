@@ -65,4 +65,8 @@ class RubyGems
     @body["licenses"]
   end
 
+  def authors
+    @body["authors"].split(",").map{|author| author.strip}
+  end
+
 end

@@ -43,7 +43,7 @@ describe RubyGems do
   end
 
   it 'can return the authors' do
-
+    expect(@faraday.authors).to eq(["Rick Olson"])
   end
 
   it 'can return the name' do
