@@ -47,7 +47,7 @@ describe RubyGems do
   end
 
   it 'can return the name' do
-
+    expect(@faraday.name).to eq("faraday")
   end
 
   it 'can return the platform' do
