@@ -73,4 +73,8 @@ class RubyGems
     @body["name"]
   end
 
+  def platform
+    @body["platform"]
+  end
+
 end

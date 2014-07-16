@@ -51,6 +51,6 @@ describe RubyGems do
   end
 
   it 'can return the platform' do
-
+    expect(@faraday.platform).to eq("ruby")
   end
 end
