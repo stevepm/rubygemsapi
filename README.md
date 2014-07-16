@@ -1,6 +1,6 @@
 # RubyGemsApi
 
-TODO: Write a gem description
+Easy access to the RubyGems API through a convenient ruby interface
 
 ## Installation
 
