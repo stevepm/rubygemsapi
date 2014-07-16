@@ -1,4 +1,7 @@
 # RubyGemsApi
+[![Code Climate](https://codeclimate.com/github/stevepm/rubygemsapi.png)](https://codeclimate.com/github/stevepm/rubygemsapi)
+[![Coverage Status](https://coveralls.io/repos/stevepm/rubygemsapi/badge.png?branch=master)](https://coveralls.io/r/stevepm/rubygemsapi?branch=master)
+[![Build Status](https://travis-ci.org/stevepm/rubygemsapi.svg?branch=master)](https://travis-ci.org/stevepm/rubygemsapi)
 
 Easy access to the RubyGems API through a convenient ruby interface
 
