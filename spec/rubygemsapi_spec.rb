@@ -33,4 +33,24 @@ describe RubyGems do
   it 'can return the description' do
     expect(@faraday.description).to eq("HTTP/REST API client library.")
   end
+
+  it 'can return dependencies' do
+    expect(@faraday.dependencies).to eq({"development"=>[{"name"=>"bundler", "requirements"=>"~> 1.0"}], "runtime"=>[{"name"=>"multipart-post", "requirements"=>"< 3, >= 1.2"}]})
+  end
+
+  it 'can return the licenses' do
+
+  end
+
+  it 'can return the authors' do
+
+  end
+
+  it 'can return the name' do
+
+  end
+
+  it 'can return the platform' do
+
+  end
 end

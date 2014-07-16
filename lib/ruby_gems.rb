@@ -57,4 +57,8 @@ class RubyGems
     @body["info"]
   end
 
+  def dependencies
+    @body["dependencies"]
+  end
+
 end
