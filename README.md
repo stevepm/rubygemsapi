@@ -24,6 +24,8 @@ Or install it yourself as:
 * Command is on the left, output is on the right
 
   ```ruby
+  require 'ruby_gems'
+  
   faraday = RubyGems.new("faraday")
   faraday.name # 'faraday'
   faraday.version # '0.9.0'
