@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = RubyGemsApi::VERSION
   spec.authors       = ["stevepm"]
   spec.email         = ["steven.magelowitz@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{TODO: Easy access to the RubyGems API through a convenient ruby interface}
+  spec.description   = %q{TODO: Easy access to the RubyGems API through a convenient ruby interface}
+  spec.homepage      = "https://github.com/stevepm/rubygemsapi"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
