@@ -20,8 +20,13 @@ Or install it yourself as:
     $ gem install RubyGemsApi
 
 ## Usage
+* Pass a valid gem name (must be the same as on RubyGems.org) to a new instance of `RubyGems`
 
-
+  ```ruby
+  faraday = RubyGems.new("faraday")
+  faraday.name // 'faraday'
+  faraday.version // '0.9.0'
+  ```
 
 ## Contributing
 
