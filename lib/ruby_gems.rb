@@ -26,7 +26,7 @@ class RubyGems
 
   def urls
     url_hash = {}
-    
+
     url_hash[:bug_tracker_uri] = @body["bug_tracker_uri"] if @body["bug_tracker_uri"]
     url_hash[:documentation_uri] = @body["documentation_uri"] if @body["documentation_uri"]
     url_hash[:gem_uri] = @body["gem_uri"] if @body["gem_uri"]

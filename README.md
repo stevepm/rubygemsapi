@@ -33,7 +33,7 @@ Or install it yourself as:
   faraday.version_downloads # 1202947
   faraday.urls # {:gem_uri => "http://rubygems.org/gems/faraday-0.9.0.gem",:homepage_uri => "https://github.com/lostisland/faraday",:project_uri => "http://rubygems.org/gems/faraday"}
   faraday.description # "HTTP/REST API client library."
-  faraday.dependencies # {"development" => [{"name" => "bundler", "requirements" => "~> 1.0"}], "runtime" => [{"name" => "multipart-post", "requirements" => "< 3, >= 1.2"}]}
+  faraday.dependencies # {:development => [{:name => "bundler", :requirements => "~> 1.0"}], :runtime => [{:name => "multipart-post", :requirements => "< 3, >= 1.2"}]}
   faraday.licenses # ['MIT']
   faraday.authors # ['Rick Olson']
   faraday.platform # ['ruby']
