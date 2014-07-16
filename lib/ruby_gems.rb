@@ -26,30 +26,16 @@ class RubyGems
 
   def urls
     url_hash = {}
-    if @body["bug_tracker_uri"]
-      url_hash[:bug_tracker_uri] = @body["bug_tracker_uri"]
-    end
-    if @body["documentation_uri"]
-      url_hash[:documentation_uri] = @body["documentation_uri"]
-    end
-    if @body["gem_uri"]
-      url_hash[:gem_uri] = @body["gem_uri"]
-    end
-    if @body["homepage_uri"]
-      url_hash[:homepage_uri] = @body["homepage_uri"]
-    end
-    if @body["mailing_list_uri"]
-      url_hash[:mailing_list_uri] = @body["mailing_list_uri"]
-    end
-    if @body["project_uri"]
-      url_hash[:project_uri] = @body["project_uri"]
-    end
-    if @body["source_code_uri"]
-      url_hash[:source_code_uri] = @body["source_code_uri"]
-    end
-    if @body["wiki_uri"]
-      url_hash[:wiki_uri] = @body["wiki_uri"]
-    end
+    
+    url_hash[:bug_tracker_uri] = @body["bug_tracker_uri"] if @body["bug_tracker_uri"]
+    url_hash[:documentation_uri] = @body["documentation_uri"] if @body["documentation_uri"]
+    url_hash[:gem_uri] = @body["gem_uri"] if @body["gem_uri"]
+    url_hash[:homepage_uri] = @body["homepage_uri"] if @body["homepage_uri"]
+    url_hash[:mailing_list_uri] = @body["mailing_list_uri"] if @body["mailing_list_uri"]
+    url_hash[:project_uri] = @body["project_uri"] if @body["project_uri"]
+    url_hash[:source_code_uri] = @body["source_code_uri"] if @body["source_code_uri"]
+    url_hash[:wiki_uri] = @body["wiki_uri"] if @body["wiki_uri"]
+
     url_hash
   end
 
@@ -58,7 +44,7 @@ class RubyGems
   end
 
   def dependencies
-    @body["dependencies"]
+    Hash[@body["dependencies"].map{|(k,v)| [k.to_sym,[Hash[v.first.map{|(k,v)| [k.to_sym,v]}]]]}]
   end
 
   def licenses
@@ -66,7 +52,7 @@ class RubyGems
   end
 
   def authors
-    @body["authors"].split(",").map{|author| author.strip}
+    @body["authors"].split(",").map { |author| author.strip }
   end
 
   def name

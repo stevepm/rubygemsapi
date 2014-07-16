@@ -35,7 +35,7 @@ describe RubyGems do
   end
 
   it 'can return dependencies' do
-    expect(@faraday.dependencies).to eq({"development" => [{"name" => "bundler", "requirements" => "~> 1.0"}], "runtime" => [{"name" => "multipart-post", "requirements" => "< 3, >= 1.2"}]})
+    expect(@faraday.dependencies).to eq({:development => [{:name => "bundler", :requirements => "~> 1.0"}], :runtime => [{:name => "multipart-post", :requirements => "< 3, >= 1.2"}]})
   end
 
   it 'can return the licenses' do
