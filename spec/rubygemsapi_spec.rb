@@ -29,4 +29,8 @@ describe RubyGems do
                                  :project_uri => "http://rubygems.org/gems/faraday"
                                })
   end
+
+  it 'can return the description' do
+    expect(@faraday.description).to eq("HTTP/REST API client library.")
+  end
 end

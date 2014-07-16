@@ -53,4 +53,8 @@ class RubyGems
     url_hash
   end
 
+  def description
+    @body["info"]
+  end
+
 end
