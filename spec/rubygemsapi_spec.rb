@@ -3,7 +3,7 @@ require 'spec_helper'
 describe RubyGems do
   before do
     VCR.use_cassette('faraday') do
-      @faraday= RubyGems.new("faraday")
+      @faraday = RubyGems.new("faraday")
     end
   end
   it 'can connect to the Ruby Gems API' do
@@ -24,10 +24,10 @@ describe RubyGems do
 
   it 'can return the urls in a hash' do
     expect(@faraday.urls).to eq({
-                                 :gem_uri => "http://rubygems.org/gems/faraday-0.9.0.gem",
-                                 :homepage_uri => "https://github.com/lostisland/faraday",
-                                 :project_uri => "http://rubygems.org/gems/faraday"
-                               })
+                                  :gem_uri => "http://rubygems.org/gems/faraday-0.9.0.gem",
+                                  :homepage_uri => "https://github.com/lostisland/faraday",
+                                  :project_uri => "http://rubygems.org/gems/faraday"
+                                })
   end
 
   it 'can return the description' do
@@ -35,11 +35,11 @@ describe RubyGems do
   end
 
   it 'can return dependencies' do
-    expect(@faraday.dependencies).to eq({"development"=>[{"name"=>"bundler", "requirements"=>"~> 1.0"}], "runtime"=>[{"name"=>"multipart-post", "requirements"=>"< 3, >= 1.2"}]})
+    expect(@faraday.dependencies).to eq({"development" => [{"name" => "bundler", "requirements" => "~> 1.0"}], "runtime" => [{"name" => "multipart-post", "requirements" => "< 3, >= 1.2"}]})
   end
 
   it 'can return the licenses' do
-
+    expect(@faraday.licenses).to eq(["MIT"])
   end
 
   it 'can return the authors' do

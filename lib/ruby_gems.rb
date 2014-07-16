@@ -61,4 +61,8 @@ class RubyGems
     @body["dependencies"]
   end
 
+  def licenses
+    @body["licenses"]
+  end
+
 end
