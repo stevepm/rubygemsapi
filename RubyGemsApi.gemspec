@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "coveralls"
   spec.add_development_dependency "jazz_hands"
-  spec.add_development_dependency "faraday"
+  spec.add_dependency "faraday"
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
 end
